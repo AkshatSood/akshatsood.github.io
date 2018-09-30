@@ -229,7 +229,7 @@
             </div>
             <div class="col-md-6">
               <div id="PPAAssignment3Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment3Modal"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/PPA_Assignment3.png" alt="The Bo'real' Forest"/>
+                  <figure class="cc-effect"><img src="images/PPA_Assignment3.png" alt="The Bo'Real' Forest"/>
                     <figcaption>
                       <div class="h4"><strong>The Bo'Real' Forest</strong></div>
                       <p>Created a predator/prey simulation of the Canadian Boreal forest with multiple terrains, animals, seasons, breeding cycles etc, using Java</p>
@@ -457,8 +457,8 @@
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Comic Books and Books</div>
-            <p>I have always loved reading DC and Marvel Comic Books. I enjoy going for ComicCons as well, and almost always Cosplay as well. Surprisingly enough, in recent years, I have gained an interest in the works of Shakespeare and thoroughly enjoy reading and listening to his plays. The two are quite different, but happen to be the only things I enjoy reading.</p>
+            <div class="h5">Comics and Books</div>
+            <p>I have always loved reading DC and Marvel Comic Books. I enjoy going for ComicCons as well, and almost always Cosplay. Surprisingly enough, in recent years, I have gained an interest in the works of Shakespeare and thoroughly enjoy reading and listening to his plays. The two are quite different, but happen to be the only things I enjoy reading.</p>
             <p>To express what comics meant to me, I had written an article titled "<a href="assets/How Superheroes Really Changed The World.pdf" target="_blank">How Superheroes Really Influenced the World</a>"</p>
           </div>
         </div>
@@ -479,7 +479,7 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-          <iframe src="https://player.vimeo.com/video/292557395" width="640" height="397" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="https://player.vimeo.com/video/292557395" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div>
           <p>This is the Second Assignment for Programming Practice and Application (PPA). The game is a text based adventure game called ‘Lambda Corps’. It has various rooms which the player can go through, characters and items to interact with and objectives to complete.  The game has been inspired from multiple sources. Some of the more important inspirations for the game are ‘The Stanley Parable’ and ‘Wolfenstein 3D’.</p>
@@ -513,8 +513,7 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-          <iframe src="https://player.vimeo.com/video/292557413" width="80%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <!--<iframe src="https://player.vimeo.com/video/292557413" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+          <iframe src="https://player.vimeo.com/video/292557413" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div>
           <p>For this assignment, we have chosen to simulate the Canadian ecosystem, closely resembling that of the Boreal forest. Animals like bears, wolves, elks, moose, wolverines and salmon populate the landscape along with 2 species of plants. Environmental factors like day and night, seasons, weather and terrain have also been simulated. The simulation contains a total of 3 different zones; the land, the shore and the lake. Bears, elks, moose, wolves and wolverines are land animals and are thus only allowed in the shore and the land. On the other hand Salmon are allowed in the lake and shore and cannot go to the land. </p>
@@ -542,7 +541,7 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-          <iframe src="https://player.vimeo.com/video/292557440" width="640" height="446" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="https://player.vimeo.com/video/292557440" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div>
           <p>This is an app created to explore available properties inside London using the property dataset of Airbnb. It’s designed to be easy to use, and powerful in the data it can display. Creating the piece of software used all the unique talents of Team Hummus, and we split the work evenly between us through GitHub and peer programming at Bush House.</p>
@@ -636,6 +635,22 @@
     <script src="js/now-ui-kit.js?v=1.1.0"></script>
     <script src="js/aos.js"></script>
     <script src="scripts/main.js"></script>
+
+    <script>
+      $("#PPAAssignment2Modal").on('hidden.bs.modal', function (e) {
+        $("#PPAAssignment2Modal iframe").attr("src", $("#PPAAssignment2Modal iframe").attr("src"));
+      });
+    </script>
+    <script>
+      $("#PPAAssignment3Modal").on('hidden.bs.modal', function (e) {
+        $("#PPAAssignment3Modal iframe").attr("src", $("#PPAAssignment3Modal iframe").attr("src"));
+      });
+    </script>
+    <script>
+      $("#PPAAssignment4Modal").on('hidden.bs.modal', function (e) {
+        $("#PPAAssignment4Modal iframe").attr("src", $("#PPAAssignment4Modal iframe").attr("src"));
+      });
+    </script>
 
   </body>
 </html>
