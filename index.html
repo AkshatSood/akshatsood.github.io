@@ -39,12 +39,14 @@
 <div class="profile-page">
   <div class="wrapper">
     <div class="page-header page-header-small" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.png');"></div>
+      <div class="page-header-image" id="particles-js" data-parallax="true" style="background-image: url('images/cc-bg-1.png');"></div>
       <div class="container">
         <div class="content-center">
           <div class="cc-profile-image"><a href="#"><img src="images/akshat.jpg" alt="Image"/></a></div>
           <div class="h2 title">Akshat Sood</div>
-          <p class="category text-white">Full Stack Developer | Student | Drummer </p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Get in Touch</a><a class="btn btn-primary" href="assets/CV - Akshat Sood.pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor" download>Download CV</a>
+          <p class="category text-white"><span id="typed3"></span></p>
+          <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Get in Touch</a>
+          <a class="btn btn-primary" href="assets/CV - Akshat Sood.pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor" download>Download CV</a>
         </div>
       </div>
       <div class="section">
@@ -572,7 +574,7 @@
                 <div class="col-md-6">
                   <div class="card-body">
                     <div class="container">
-                      <div class="row justify-content-center align-items-center">
+                      <div class="row justify-content-center align-items-center mt-4">
                           <a class="typeform-share button" href="https://akshatsood.typeform.com/to/OAOMn3" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#44318D;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Contact Me</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
                       </div>
                     </div>
@@ -589,14 +591,18 @@
               </div>
               <div class="row">
                 <div class="container">
-                  <div class="row justify-content-center">
+                  <div class="row justify-content-center mb-3">
                     <div class="button-container">
-                      <a class="btn btn-default btn-round btn-lg btn-icon" href="https://github.com/AkshatSood" target="_blank" rel="tooltip" title="Follow me on GitHub"><i class="fa fa-github"></i></a>
-                      <a class="btn btn-default btn-round btn-lg btn-icon" href="https://stackoverflow.com/users/8996600/rashdiamond" target="_blank" rel="tooltip" title="Follow me on Stack Overflow"><i class="fa fa-stack-overflow"></i></a>
-                      <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/akshat-sood-72801867/" target="_blank" rel="tooltip" title="Follow me on LinkedIn"><i class="fa fa-linkedin"></i></a>
-                      <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.facebook.com/akshat.sood.92" target="_blank" rel="tooltip" title="Follow me on Facebook"><i class="fa fa-facebook"></i></a>
-                      <a class="btn btn-default btn-round btn-lg btn-icon" href="https://twitter.com/RashDiamond" target="_blank" rel="tooltip" title="Follow me on Twitter"><i class="fa fa-twitter"></i></a>
-                      <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.instagram.com/rashdiamond/" target="_blank" rel="tooltip" title="Follow me on Instagram"><i class="fa fa-instagram"></i></a>
+                      <a class="btn btn-default btn-round btn-lg btn-icon mx-2" href="https://github.com/AkshatSood" target="_blank" rel="tooltip" title="Follow me on GitHub"><i class="fa fa-github"></i></a>
+                      <a class="btn btn-default btn-round btn-lg btn-icon mx-2" href="https://stackoverflow.com/users/8996600/rashdiamond" target="_blank" rel="tooltip" title="Follow me on Stack Overflow"><i class="fa fa-stack-overflow"></i></a>
+                      <a class="btn btn-default btn-round btn-lg btn-icon mx-2" href="https://www.linkedin.com/in/akshat-sood-72801867/" target="_blank" rel="tooltip" title="Follow me on LinkedIn"><i class="fa fa-linkedin"></i></a>
+                      </div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="button-container mb-4">
+                      <a class="btn btn-default btn-round btn-lg btn-icon mx-2" href="https://www.facebook.com/akshat.sood.92" target="_blank" rel="tooltip" title="Follow me on Facebook"><i class="fa fa-facebook"></i></a>
+                      <a class="btn btn-default btn-round btn-lg btn-icon mx-2" href="https://twitter.com/RashDiamond" target="_blank" rel="tooltip" title="Follow me on Twitter"><i class="fa fa-twitter"></i></a>
+                      <a class="btn btn-default btn-round btn-lg btn-icon mx-2" href="https://www.instagram.com/rashdiamond/" target="_blank" rel="tooltip" title="Follow me on Instagram"><i class="fa fa-instagram"></i></a>
                     </div>
                   </div>
                 </div>
@@ -610,7 +616,7 @@
 </div></div>
     </div>
     <footer class="footer">
-      <div class="h4 title text-center">Akshat Sood</div>
+      <div class="h4 title text-center"><a href="#">Akshat Sood</a></div>
 
     </footer>
     <script src="js/core/jquery.3.2.1.min.js"></script>
@@ -619,7 +625,19 @@
     <script src="js/now-ui-kit.js?v=1.1.0"></script>
     <script src="js/aos.js"></script>
     <script src="scripts/main.js"></script>
-
+    <script src="js/typed.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/JavaScript">
+        var typed3 = new Typed('#typed3', {
+          strings: ['Computer Science Student', 'Aspiring Full Stack Developer', 'Geek', 'App Developer', 'Drummer', 'Web Developer', 'Game Design Enthusiast'],
+          typeSpeed: 30,
+          backSpeed: 25,
+          backDelay: 750,
+          smartBackspace: true, // this is a default
+          loop: true          
+        });
+    </script>    
     <script>
       $("#PPAAssignment2Modal").on('hidden.bs.modal', function (e) {
         $("#PPAAssignment2Modal iframe").attr("src", $("#PPAAssignment2Modal iframe").attr("src"));
