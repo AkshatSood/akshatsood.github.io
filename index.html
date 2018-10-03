@@ -20,6 +20,7 @@
     <link href="css/aos.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/videoStyles.css" rel="stylesheet">
   </head>
   <body id="top">
     <header>
@@ -231,25 +232,25 @@
       </div>
     </div>
     <div class="tab-content gallery mt-5">
-      <div class="tab-pane active" id="web-development">
+      <div class="tab-pane active" id="work-experience">
         <div class="ml-auto mr-auto">
           <div class="row">
             <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
+              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#LoggieModal"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/Loggie.png" alt="Loggie"/>
                     <figcaption>
                       <div class="h4"><strong>Loggie</strong></div>
                       <p>Responsible for developing the website and framework for a Singapore Based Logistics Platform, using technologies such as React, Node, MongoDB, Stripe etc.</p>
                       </figcaption>
                   </figure></a></div>
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
+              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/PowerBIReport.png" alt="Power BI Live Report"/>
                     <figcaption>
                       <div class="h4"><Strong>Power BI Live Report Dashboard</Strong></div>
                       <p>Created a generic report dashboard for businesses using Power BI and DAX.</p>
                     </figcaption>
                   </figure></a></div>
-              <div id="PPAAssignment4Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment4Modal"><a href="#web-development">
+              <div id="PPAAssignment4Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment4Modal"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/PPA_Assignment4.png" alt="AirBnb Themed Property Marketplace"/>
                     <figcaption>
                       <div class="h4"><Strong>AirBnb Themed Property Marketplace</Strong></div>
@@ -258,7 +259,7 @@
                   </figure></a></div>
             </div>
             <div class="col-md-6">
-              <div id="PPAAssignment3Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment3Modal"><a href="#web-development">
+              <div id="PPAAssignment3Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment3Modal"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/PPA_Assignment3.png" alt="The Bo'Real' Forest"/>
                     <figcaption>
                       <div class="h4"><strong>The Bo'Real' Forest</strong></div>
@@ -272,7 +273,7 @@
                       <p>Responsible for updates and maintenance of a Singapore based socail media application, using Node, MongoDB, JavaScript and Swift</p>
                     </figcaption>
                   </figure></a></div>
-              <div id="PPAAssignment2Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment2Modal"><a href="#web-development">
+              <div id="PPAAssignment2Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment2Modal"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/PPA_Assignment2.png" alt="Lambda Corps"/>
                     <figcaption>
                       <div class="h4"><strong>Lambda Corps</strong></div>
@@ -495,6 +496,38 @@
   </div>
 </div>
 
+<!-- Loggie Modal -->
+<div class="modal fade" id="LoggieModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Loggie</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div>
+          <p>RESPONSIBLE FOR DEVELOPING THE WEBSITE AND FRAMEWORK FOR A SINGAPORE BASED LOGISTICS PLATFORM, USING TECHNOLOGIES SUCH AS REACT, NODE.JS, MONGODB, STRIPE, ETC</p>
+        </div>
+        <div class="row justify-content-md-center video-responsive">
+          <iframe src="https://player.vimeo.com/video/293150882" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div>
+          <p>
+            The website is under construction and will soon be published for use. Stay tuned for updates.
+          </p>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary pop"><a href="#" target="_blank" style="text-decoration:none; color: #FFFFFF;">View Website</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- PPA Assignment 2 Modal -->
 <div class="modal fade" id="PPAAssignment2Modal">
   <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -507,7 +540,10 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-          <iframe src="https://player.vimeo.com/video/292557395" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <p>CREATED A TEXT-BASED RPG WITH MULTIPLE ENDINGS, BASED IN THE FUTURE, USING JAVA</p>
+        </div>
+        <div class="row justify-content-md-center video-responsive">
+          <iframe src="https://player.vimeo.com/video/292557395" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div>
           <p>This is the Second Assignment for Programming Practice and Application (PPA). The game is a text based adventure game called ‘Lambda Corps’. It has various rooms which the player can go through, characters and items to interact with and objectives to complete.  The game has been inspired from multiple sources. Some of the more important inspirations for the game are ‘The Stanley Parable’ and ‘Wolfenstein 3D’.</p>
@@ -523,6 +559,7 @@
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><a href="https://github.com/BlackCowThrower/Assignment3" target="_blank" style="text-decoration:none; color: #FFFFFF;">View on GitHub</a></button>
       </div>
     </div>
   </div>
@@ -541,6 +578,9 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
+          <p>CREATED A PREDETOR/PREY SIMULATION OF THE CANADIAN BOREAL FOREST WITH MULTIPLE TERRAINS, ANIMALS, SEASONS, BREEDING CYCLES ETC, USING JAVA</p>
+        </div>
+        <div class="row justify-content-md-center video-responsive">
           <iframe src="https://player.vimeo.com/video/292557413" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div>
@@ -551,6 +591,7 @@
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><a href="https://github.com/BlackCowThrower/Assignment3" target="_blank" style="text-decoration:none; color: #FFFFFF;">View on GitHub</a></button>
       </div>
     </div>
   </div>
@@ -569,6 +610,9 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
+          <p>CREATED A CUI FOR A VISUALIZER FOR SUCH A MARKETPLACE DISPLAYING DATA GIVEN IN A CSV. USED JAVA, FXML, CSS AND GOOGLE MAPS API</p>
+        </div>
+        <div class="row justify-content-md-center video-responsive">
           <iframe src="https://player.vimeo.com/video/292557440" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div>
@@ -579,6 +623,7 @@
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><a href="#" target="_blank" style="text-decoration:none; color: #FFFFFF;">View on GitHub</a></button>
       </div>
     </div>
   </div>
@@ -672,6 +717,14 @@
       $("#PPAAssignment4Modal").on('hidden.bs.modal', function (e) {
         $("#PPAAssignment4Modal iframe").attr("src", $("#PPAAssignment4Modal iframe").attr("src"));
       });
+    </script>
+    <script>
+      $(document).ready(function() {
+        var modals = ['#PPAAssignment2Modal', '#PPAAssignment3Modal', '#PPAAssignment4Modal', '#LoggieModal'];
+        if (window.location.hash && ~modals.indexOf(window.location.hash)) {
+           $(window.location.hash).modal();
+        }
+      })
     </script>
 
   </body>
