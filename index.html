@@ -273,7 +273,7 @@
                       <p>Created a generic report dashboard for businesses using Power BI and DAX.</p>
                     </figcaption>
                   </figure></a></div>
-              <div id="PPAAssignment4Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment4Modal"><a href="#work-experience">
+              <div id="PPAAssignment4Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#Project-Airbnb-Property-Viewer"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/PPA_Assignment4.png" alt="AirBnb Themed Property Marketplace"/>
                     <figcaption>
                       <div class="h4"><Strong>AirBnb Themed Property Marketplace</Strong></div>
@@ -282,7 +282,7 @@
                   </figure></a></div>
             </div>
             <div class="col-md-6">
-              <div id="PPAAssignment3Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment3Modal"><a href="#work-experience">
+              <div id="PPAAssignment3Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#Project-The-Boreal-Forest"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/PPA_Assignment3.png" alt="The Bo'Real' Forest"/>
                     <figcaption>
                       <div class="h4"><strong>The Bo'Real' Forest</strong></div>
@@ -296,7 +296,7 @@
                       <p>Responsible for updates and maintenance of a Singapore based socail media application, using Node, MongoDB, JavaScript and Swift</p>
                     </figcaption>
                   </figure></a></div>
-              <div id="PPAAssignment2Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#PPAAssignment2Modal"><a href="#work-experience">
+              <div id="PPAAssignment2Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#Project-Lambda-Corps"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/PPA_Assignment2.png" alt="Lambda Corps"/>
                     <figcaption>
                       <div class="h4"><strong>Lambda Corps</strong></div>
@@ -586,7 +586,7 @@
 </div>
 
 <!-- PPA Assignment 2 Modal -->
-<div class="modal fade" id="PPAAssignment2Modal">
+<div class="modal fade" id="Project-Lambda-Corps">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <!-- Modal Header -->
@@ -624,7 +624,7 @@
 
 
 <!-- PPA Assignment 3 Modal -->
-<div class="modal fade" id="PPAAssignment3Modal">
+<div class="modal fade" id="Project-The-Boreal-Forest">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <!-- Modal Header -->
@@ -656,7 +656,7 @@
 
 
 <!-- PPA Assignment 4 Modal -->
-<div class="modal fade" id="PPAAssignment4Modal">
+<div class="modal fade" id="Project-Airbnb-Property-Viewer">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <!-- Modal Header -->
@@ -761,28 +761,27 @@
         });
     </script>
     <script>
-      $("#PPAAssignment2Modal").on('hidden.bs.modal', function (e) {
-        $("#PPAAssignment2Modal iframe").attr("src", $("#PPAAssignment2Modal iframe").attr("src"));
+      $("#Project-Lambda-Corps").on('hidden.bs.modal', function (e) {
+        $("#Project-Lambda-Corps iframe").attr("src", $("#Project-Lambda-Corps iframe").attr("src"));
       });
     </script>
     <script>
-      $("#PPAAssignment3Modal").on('hidden.bs.modal', function (e) {
-        $("#PPAAssignment3Modal iframe").attr("src", $("#PPAAssignment3Modal iframe").attr("src"));
+      $("#Project-The-Boreal-Forest").on('hidden.bs.modal', function (e) {
+        $("#Project-The-Boreal-Forest iframe").attr("src", $("#Project-The-Boreal-Forest iframe").attr("src"));
       });
     </script>
     <script>
-      $("#PPAAssignment4Modal").on('hidden.bs.modal', function (e) {
-        $("#PPAAssignment4Modal iframe").attr("src", $("#PPAAssignment4Modal iframe").attr("src"));
+      $("#Project-Airbnb-Property-Viewer").on('hidden.bs.modal', function (e) {
+        $("#Project-Airbnb-Property-Viewer iframe").attr("src", $("#Project-Airbnb-Property-Viewer iframe").attr("src"));
       });
     </script>
     <script>
       $(document).ready(function() {
-        var modals = ['#PPAAssignment2Modal', '#PPAAssignment3Modal', '#PPAAssignment4Modal', '#LoggieModal', '#CapoForDummiesModal'];
+        var modals = ['#Project-Lambda-Corps', '#Project-The-Boreal-Forest', '#Project-Airbnb-Property-Viewer', '#LoggieModal', '#CapoForDummiesModal'];
         if (window.location.hash && ~modals.indexOf(window.location.hash)) {
            $(window.location.hash).modal();
         }
       })
     </script>
-
   </body>
 </html>
