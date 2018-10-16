@@ -303,6 +303,13 @@
                       <p>Created a text-based RPG with multiple endings, based in the future, using Java. </p>
                     </figcaption>
                   </figure></a></div>
+              <div id="PPAAssignment2Btn" class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#the-voice-london-database"><a href="#work-experience">
+                  <figure class="cc-effect"><img src="images/TheVoiceLondonDatabase.png" alt="The Voice London Database"/>
+                    <figcaption>
+                      <div class="h4"><strong>The Voice London Database</strong></div>
+                      <p>Created a database and performed select, update and delete operations on a database for The Voice London.</p>
+                    </figcaption>
+                  </figure></a></div>
             </div>
           </div>
         </div>
@@ -549,7 +556,7 @@
   </div>
 </div>
 
-<!-- Loggie Modal -->
+<!-- Capo For Dummies Modal -->
 <div class="modal fade" id="capo-for-dummies">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -583,7 +590,7 @@
   </div>
 </div>
 
-<!-- PPA Assignment 2 Modal -->
+<!-- PPA Assignment 2 Modal (Lambda Corps Modal)-->
 <div class="modal fade" id="lambda-corps">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -621,7 +628,7 @@
 </div>
 
 
-<!-- PPA Assignment 3 Modal -->
+<!-- PPA Assignment 3 Modal (The Bo"Real" Forest Modal)-->
 <div class="modal fade" id="the-boreal-forest">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -668,7 +675,7 @@
           <p>CREATED A GUI FOR A VISUALIZER FOR SUCH A MARKETPLACE DISPLAYING DATA GIVEN IN A CSV. USED JAVA, FXML, CSS AND GOOGLE MAPS API</p>
         </div>
         <div class="row justify-content-md-center video-responsive">
-          <iframe src="https://player.vimeo.com/video/292557440" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="https://player.vimeo.com/video/295442168" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div>
           <p>This is an app created to explore available properties inside London using the property dataset of Airbnb. It’s designed to be easy to use, and powerful in the data it can display. Creating the piece of software used all the unique talents of Team Hummus, and we split the work evenly between us through GitHub and peer programming at Bush House.</p>
@@ -683,6 +690,38 @@
     </div>
   </div>
 </div>
+
+<!-- Database Assignment Modal (The Voice London Database)-->
+<div class="modal fade" id="the-voice-london-database">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">The Voice London Database</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div>
+            <p>CREATED A DATABASE AND PERFORMED SELECT, UPDATE AND DELETE OPERATIONS ON A DATABASE FOR THE VOICE LONDON.</p>
+        </div>
+        <div class="row justify-content-md-center video-responsive">
+          <iframe src="https://player.vimeo.com/video/295442168" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div>
+          <p>Implemented a relational model for a television  talent show name "The Voice London", based on a previously created ER Diagram and set of requirements.</p>
+          <p>Performed different data manipulation and retrieval operations on the database.</p>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><a href="https://github.com/BlackCowThrower/Assignment3" target="_blank" style="text-decoration:none; color: #FFFFFF;">View on GitHub</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="section" id="contact">
   <div class="cc-contact-information" style="background-image: url('images/staticmap.png');">
     <div class="container">
@@ -758,7 +797,7 @@
           loop: true
         });
     </script>
-    <script>
+    <!-- <script>
       $("#lambda-corps").on('hidden.bs.modal', function (e) {
         $("#lambda-corps iframe").attr("src", $("#lambda-corps iframe").attr("src"));
       });
@@ -772,10 +811,10 @@
       $("#airbnb-property-viewer").on('hidden.bs.modal', function (e) {
         $("#airbnb-property-viewer iframe").attr("src", $("#airbnb-property-viewer iframe").attr("src"));
       });
-    </script>
+    </script> -->
     <script>
       $(document).ready(function() {
-        var modals = ['#lambda-corps', '#the-boreal-forest', '#airbnb-property-viewer', '#loggie-modal', '#capo-for-dummies'];
+        var modals = ['#lambda-corps', '#the-boreal-forest', '#airbnb-property-viewer', '#loggie-modal', '#capo-for-dummies', '#the-voice-london-database'];
         if (window.location.hash && ~modals.indexOf(window.location.hash)) {
            $(window.location.hash).modal();
         }
