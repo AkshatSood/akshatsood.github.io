@@ -289,7 +289,7 @@
                       <p>Responsible for developing the website and framework for a Singapore Based Logistics Platform, using technologies such as React, Node, MongoDB, Stripe etc.</p>
                       </figcaption>
                   </figure></a></div>
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#seg-lab-project-modal"><a href="#work-experience">
+              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#laravel-game-rentals-web-app"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/AmazingGameRentals.png" alt="Laravel Game-Rentals Web App"/>
                     <figcaption>
                       <div class="h4"><strong>Laravel Game-Rentals Web App</strong></div>
@@ -319,7 +319,7 @@
                   </figure></a></div>
             </div>
             <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#seg-major-project-modal"><a href="#work-experience">
+              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#my-buddy-app"><a href="#work-experience">
                   <figure class="cc-effect"><img src="images/MyBuddyApp.png" alt="NHS My Buddy App"/>
                     <figcaption>
                       <div class="h4"><strong>NHS My Buddy App</strong></div>
@@ -634,7 +634,7 @@
 </div>
 
 <!-- SEG Major Project Modal -->
-<div class="modal fade" id="seg-major-project-modal">
+<div class="modal fade" id="my-buddy-app">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <!-- Modal Header -->
@@ -651,7 +651,8 @@
           <iframe src="https://player.vimeo.com/video/333832760" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div>
-          <p></p>
+          <p>The My Buddy app is a fully functional cross-platform (Android \& iOS) mobile application specially designed for the Maudsley NHS Foundation Trust Helping Families Team which are a specialist mental health service for families in complex circumstances. It's a buddy system for the clinicians that allows them to keep track of their appointments, ensure their attendance and ensure the safety of the clinicians when they see their patients by having them check in/out at scheduled times, and notify members of the team if they haven't already. The entire app is centered around the objective to provide a seamless experience for the Helping Families Team Members at the NHS. </p>
+          <p>The objective of this project is to produce a mobile app that all members of the team can download. This would need specific features, for example being able to log appointment start and end times, check in and out of appointments, emergency functions allowing contact to be made with the entire team as well as sharing the users live location, reminders for the team to check in on clinician etc. When creating appointments, a buddy request will be sent and the buddy, when accepted, will be responsible for keeping in touch and ensuring safety. It should be an easy way for clinicians in the community to let their team know they are safe, and for the team to be able to act quickly if required.</p>
         </div>
       </div>
       <!-- Modal footer -->
@@ -663,7 +664,7 @@
 </div>
 
 <!-- SEG Lab Project Modal -->
-<div class="modal fade" id="seg-lab-project-modal">
+<div class="modal fade" id="laravel-game-rentals-web-app">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <!-- Modal Header -->
@@ -674,7 +675,7 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div>
-          <p></p>
+          <p>DEVELOPED A WEB APP FOR A GAME RENTALS SOCIETY USING THE LAMP STACK</p>
         </div>
         <div class="row justify-content-md-center video-responsive">
           <!-- <iframe src="https://player.vimeo.com/video/293150882" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
@@ -938,7 +939,15 @@
     </script>
     <script>
       $(document).ready(function() {
-        var modals = ['#lambda-corps', '#the-boreal-forest', '#airbnb-property-viewer', '#loggie-modal', '#capo-for-dummies', '#the-voice-london-database'];
+        var modals = ['#lambda-corps',
+                      '#the-boreal-forest',
+                      '#airbnb-property-viewer',
+                      '#loggie-modal',
+                      '#capo-for-dummies',
+                      '#the-voice-london-database',
+                      '#my-buddy-app',
+                      '#laravel-game-rentals-web-app'
+                    ];
         if (window.location.hash && ~modals.indexOf(window.location.hash)) {
            $(window.location.hash).modal();
         }
