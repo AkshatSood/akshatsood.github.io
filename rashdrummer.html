@@ -16,6 +16,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/RashDrummer.css" rel="stylesheet">
     <link href="styles/videoStyles.css" rel="stylesheet">
+
+
   </head>
   <body id="top">
     <header>
@@ -45,7 +47,7 @@
       <div class="page-header-image" id="particles-js" data-parallax="true" style="background-image: url('images/rashdrummer/background.png');"></div>
       <div class="container">
         <div class="content-center">
-          <div class="cc-profile-image"><a href="#"><img src="images/rashdrummer/logo.jpeg" alt="Image"/></a></div>
+          <div class="cc-profile-image"><a href="#"><img src="images/rashdrummer/logo.png" alt="Image"/></a></div>
           <div class="h2 title">RashDrummer</div>
 
           <!-- Tpye Animation -->
@@ -78,7 +80,8 @@
         <div class="col-lg-12 col-md-12">
           <div class="card-body">
             <div class="h4 mt-0 title">About</div>
-            <p></p>
+            <p>Hi, my name is Akshat and I've been drumming since 2015. After a 2 year hiatus, I am trying to get back into drumming. For practice, I record drum covers on my kit (Alesis Crimson Mesh II Kit). This way I can share the music which I enjoy and learn new things along the way.</p>
+            <p>If you have any feedback, suggestions or recommendations, reach out to me on social media or directly through the contact form below.</p>
           </div>
         </div>
       </div>
@@ -94,10 +97,11 @@
     <div class="row">
       <div class="col-md-6 ml-auto mr-auto">
         <div class="h4 text-center mb-4 title">Library</div>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
         <hr /><br />
+        <input type="text" class="custom-input" id="myInput" onkeyup="myFunction()" placeholder="Search for a Song or Artist...">
       </div>
     </div>
+
     <div class="tab-content gallery mt-5">
       <div class="tab-pane active" id="work-experience">
         <div class="ml-auto mr-auto">
@@ -115,9 +119,9 @@
 
             <div class="col-md-6">
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-toggle="modal" data-target="#cover-12-modal">
-                  <figure class="cc-effect"><img src="images/rashdrummer/12.png" alt="Middle"/>
+                  <figure class="cc-effect"><img src="images/rashdrummer/12.png" alt="The Middle"/>
                     <figcaption>
-                      <div class="h4"><strong>Middle</strong></div>
+                      <div class="h4"><strong>The Middle</strong></div>
                       <p>Jimmy Eat World</p>
                       </figcaption>
                   </figure></div>
@@ -662,10 +666,6 @@
 </div>
   </div>
 
-    <!-- <footer class="footer">
-      <div class="h4 title text-center"><a class="footer-title" href="#">Akshat Sood</a></div>
-    </footer> -->
-
 
     <script src="js/core/jquery.3.2.1.min.js"></script>
     <script src="js/core/popper.min.js"></script>
@@ -680,7 +680,6 @@
     <!-- SEARCH FILTER SCRIPT -->
     <script>
       function myFunction() {
-        // Declare variables
         var input, filter, ul, li, a, i, txtValue;
         input = document.getElementById('myInput');
         filter = input.value.toUpperCase();
@@ -690,9 +689,13 @@
         // Loop through all list items, and hide those who don't match the search query
         for (i = 0; i < li.length; i++) {
           strong = li[i].getElementsByTagName("strong")[0];
-          // p = li[i].getElementsByTagName("p")[0];
-          txtValue = strong.textContent || strong.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          p = li[i].getElementsByTagName("p")[0];
+          txtValueS = strong.textContent || strong.innerText;
+          txtValueP = p.textContent || p.innerText;
+
+          if (txtValueS.toUpperCase().indexOf(filter) > -1)  {
+            li[i].style.display = "";
+          } else if (txtValueP.toUpperCase().indexOf(filter) > -1)  {
             li[i].style.display = "";
           } else {
             li[i].style.display = "none";
@@ -700,6 +703,7 @@
         }
       }
     </script>
+
 
     <script type="text/JavaScript">
         var typed3 = new Typed('#typed3', {
