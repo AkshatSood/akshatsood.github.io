@@ -2923,6 +2923,12 @@ p {
   color: #828282;
 }
 
+.sub-category {
+  font-style: italic;
+  font-weight: 600;
+  color: #828282;
+}
+
 .text-primary {
   color: #44318D !important;
 }
@@ -4856,7 +4862,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .profile-page .page-header {
-  min-height: 550px;
+  min-height: 600px;
 }
 
 .profile-page .profile-container {
@@ -7110,8 +7116,8 @@ Created using IcoMoon - icomoon.io
   content: "";
   border: 15px solid rgba(55, 140, 63, 0.6);
   border-radius: 50%;
-  height: 180px;
-  width: 180px;
+  height: 280px;
+  width: 280px;
   position: absolute;
   left: 0;
   -webkit-animation: pulsate 1.6s ease-out;
@@ -7125,8 +7131,8 @@ Created using IcoMoon - icomoon.io
 .cc-profile-image img {
   position: relative;
   border-radius: 50%;
-  height: 180px;
-  width: 180px;
+  height: 280px;
+  width: 280px;
   padding: 0;
   margin: 0;
   border: 15px solid transparent;
