@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  >
+  <head>
+    <meta charset="UTF-8" />
+    <title>London Tube-style Branching Timeline</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 2rem;
+      }
+      svg {
+        background: white;
+        border: 1px solid #ccc;
+      }
+      .label {
+        font-size: 13px;
+        fill: #333;
+      }
+      .legend {
+        font-size: 14px;
+        fill: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>London Tube-style Branching Timeline</h2>
+    <svg id="timeline" width="1400" height="1600"></svg>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+      const branches = [
+        {
+          name: "Training",
+          color: "#0078bd",
+          startDate: "2019-07-01",
+          endDate: "2019-08-15",
+          side: "right",
+          stations: [
+            { name: "IT Consultancy", date: "2019-07-01" },
+            { name: "Python", date: "2019-07-20" },
+          ],
+        },
+        {
+          name: "Projects",
+          color: "#e32017",
+          startDate: "2019-07-15",
+          endDate: "2019-09-10",
+          side: "left",
+          stations: [
+            { name: "Project A", date: "2019-08-05" },
+            { name: "Subproject A1", date: "2019-08-20" },
+          ],
+        },
+        {
+          name: "Sub-Projects",
+          color: "#f6a100",
+          startDate: "2019-07-15",
+          endDate: "2019-09-01",
+          side: "left",
+          stations: [{ name: "Project B", date: "2019-08-15" }],
+        },
+      ];
+
+      const svg = d3.select("#timeline");
+      const width = 1400;
+      const height = 1600;
+      const margin = { top: 50, left: width / 2 };
+
+      const parseDate = d3.timeParse("%Y-%m-%d");
+      branches.forEach((branch) => {
+        branch.startDate = parseDate(branch.startDate);
+        branch.endDate = parseDate(branch.endDate);
+        branch.stations.forEach(
+          (station) => (station.date = parseDate(station.date))
+        );
+      });
+
+      const allDates = branches.flatMap((b) => [
+        b.startDate,
+        b.endDate,
+        ...b.stations.map((s) => s.date),
+      ]);
+      const months = d3.timeMonths(d3.min(allDates), d3.max(allDates));
+
+      const y = d3
+        .scalePoint()
+        .domain(months)
+        .range([margin.top, height - 100])
+        .padding(0.5);
+
+      // Draw main timeline
+      svg
+        .append("line")
+        .attr("x1", margin.left)
+        .attr("x2", margin.left)
+        .attr("y1", margin.top - 40)
+        .attr("y2", height - 100 + 40)
+        .attr("stroke", "#888")
+        .attr("stroke-width", 4);
+
+      // Draw month gridlines
+      svg
+        .selectAll(".month-line")
+        .data(months)
+        .enter()
+        .append("line")
+        .attr("x1", 50)
+        .attr("x2", width - 50)
+        .attr("y1", (d) => y(d))
+        .attr("y2", (d) => y(d))
+        .attr("stroke", "#eee")
+        .attr("stroke-dasharray", "2,2");
+
+      svg
+        .selectAll(".month-label")
+        .data(months)
+        .enter()
+        .append("text")
+        .attr("x", margin.left - 10)
+        .attr("y", (d) => y(d) - 5)
+        .attr("text-anchor", "end")
+        .attr("font-size", "12px")
+        .text((d) => d3.timeFormat("%B %Y")(d));
+
+      // Track occupied positions to avoid overlaps
+      const occupiedOffsets = { left: {}, right: {} };
+      const spacing = 120;
+
+      // Draw branches
+      branches.forEach((branch, index) => {
+        const y1 = y(d3.timeMonth.floor(branch.startDate));
+        const y2 = y(d3.timeMonth.ceil(branch.endDate));
+        const dir = branch.side;
+        const offsetKey = d3.timeFormat("%Y-%m-%d")(branch.startDate);
+
+        if (!occupiedOffsets[dir][offsetKey])
+          occupiedOffsets[dir][offsetKey] = 0;
+        const level = occupiedOffsets[dir][offsetKey]++;
+
+        const x =
+          margin.left +
+          (dir === "right" ? 1 : -1) * (spacing + level * spacing);
+
+        // Vertical branch line
+        svg
+          .append("line")
+          .attr("x1", x)
+          .attr("x2", x)
+          .attr("y1", y1)
+          .attr("y2", y2)
+          .attr("stroke", branch.color)
+          .attr("stroke-width", 6);
+
+        // Connector from main line
+        svg
+          .append("line")
+          .attr("x1", margin.left)
+          .attr("x2", x)
+          .attr("y1", y1)
+          .attr("y2", y1)
+          .attr("stroke", branch.color)
+          .attr("stroke-width", 3);
+
+        // Draw stations
+        branch.stations.forEach((station) => {
+          const yStation = y(d3.timeMonth.floor(station.date));
+
+          svg
+            .append("circle")
+            .attr("cx", x)
+            .attr("cy", yStation)
+            .attr("r", 7)
+            .attr("fill", "white")
+            .attr("stroke", branch.color)
+            .attr("stroke-width", 3);
+
+          svg
+            .append("text")
+            .attr("x", x + (dir === "right" ? 12 : -12))
+            .attr("y", yStation + 4)
+            .attr("text-anchor", dir === "right" ? "start" : "end")
+            .attr("class", "label")
+            .text(station.name);
+        });
+      });
+    </script>
+  </body>
+</html>
